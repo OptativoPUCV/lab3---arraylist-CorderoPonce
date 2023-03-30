@@ -30,7 +30,7 @@ void append(ArrayList * l, void * data){
     l->size++;
   }
   else{
-    l->capacity++;
+    l->capacity *= 2;
     l->size++;
   }
 
