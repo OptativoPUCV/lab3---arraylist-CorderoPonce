@@ -38,6 +38,8 @@ void append(ArrayList * l, void * data){
 
 void push(ArrayList * l, void * data, int i){
 
+  if (l->size == 0) return;
+
   if (i > l->size){
     return;
   }
@@ -49,6 +51,7 @@ void push(ArrayList * l, void * data, int i){
   for (int k = l->size ; k >= i ; k--){
     l->data[k] = l->data[k+1];
   }
+  l->size++;
   l->data[i] = data;
 
 }
