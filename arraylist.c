@@ -30,8 +30,8 @@ void append(ArrayList * l, void * data){
     l->size++;
   }
   else{
-    l->data = realloc (l->data, sizeof(void*) * l->capacity);
     l->capacity *= 2;
+    l->data = realloc (l->data, sizeof(void*) * l->capacity);
     l->size++;
   }
 
